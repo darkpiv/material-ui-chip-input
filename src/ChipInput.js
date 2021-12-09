@@ -5,16 +5,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import Input from '@material-ui/core/Input'
-import FilledInput from '@material-ui/core/FilledInput/FilledInput'
-import OutlinedInput from '@material-ui/core/OutlinedInput'
-import InputLabel from '@material-ui/core/InputLabel'
-import Chip from '@material-ui/core/Chip'
-import withStyles from '@material-ui/core/styles/withStyles'
-import blue from '@material-ui/core/colors/blue'
-import FormControl from '@material-ui/core/FormControl'
-import FormHelperText from '@material-ui/core/FormHelperText'
+import Input from '@mui/material/Input'
+import FilledInput from '@mui/material/FilledInput/FilledInput'
+import OutlinedInput from '@mui/material/OutlinedInput'
+import InputLabel from '@mui/material/InputLabel'
+import Chip from '@mui/material/Chip'
+import withStyles from '@mui/styles/withStyles'
+import FormControl from '@mui/material/FormControl'
+import FormHelperText from '@mui/material/FormHelperText'
 import cx from 'classnames'
+import { blue } from '@mui/material/colors'
 
 const variantComponent = {
   standard: Input,
@@ -23,7 +23,7 @@ const variantComponent = {
 }
 
 const styles = (theme) => {
-  const light = theme.palette.type === 'light'
+  const light = theme.palette.mode === 'light'
   const bottomLineColor = light ? 'rgba(0, 0, 0, 0.42)' : 'rgba(255, 255, 255, 0.7)'
 
   return {
